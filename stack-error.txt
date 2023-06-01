@@ -94,3 +94,5 @@ Processing ./tools/dbcounter
   TypeError: deprecated() got an unexpected keyword argument 'name'
   ----------------------------------------
 ERROR: Command errored out with exit status 1: /usr/bin/python3.8 /usr/lib/python3/dist-packages/pip install --ignore-installed --no-user --prefix /tmp/pip-build-env-05pz37up/overlay --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- sqlalchemy 'setuptools>=42' Check the logs for full command output.
+
+## tried to fix by reinstalling different version of pyOpenSSL and OpenSSL per https://stackoverflow.com/questions/74041308/pip-throws-typeerror-deprecated-error, now pip is broken
