@@ -1,3 +1,30 @@
+Requirement already satisfied: zipp===3.15.0 in /opt/stack/requirements/.venv/lib/python3.8/site-packages (from -c /opt/stack/requirements/upper-constraints.txt (line 564)) (3.15.0)
+Building wheels for collected packages: openstack-requirements
+  Building wheel for openstack-requirements (setup.py) ... error
+  ERROR: Command errored out with exit status 1:
+   command: /opt/stack/requirements/.venv/bin/python3 -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-req-build-km4vjoxv/setup.py'"'"'; __file__='"'"'/tmp/pip-req-build-km4vjoxv/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' bdist_wheel -d /tmp/pip-wheel-_pj_qorz
+       cwd: /tmp/pip-req-build-km4vjoxv/
+  Complete output (6 lines):
+  usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: setup.py --help [cmd1 cmd2 ...]
+     or: setup.py --help-commands
+     or: setup.py cmd --help
+  
+  error: invalid command 'bdist_wheel'
+  ----------------------------------------
+  ERROR: Failed building wheel for openstack-requirements
+  Running setup.py clean for openstack-requirements
+Failed to build openstack-requirements
+Installing collected packages: openstack-requirements
+  Attempting uninstall: openstack-requirements
+    Found existing installation: openstack-requirements 1.2.1.dev6133
+    Uninstalling openstack-requirements-1.2.1.dev6133:
+      Successfully uninstalled openstack-requirements-1.2.1.dev6133
+    Running setup.py install for openstack-requirements ... done
+Successfully installed openstack-requirements-1.2.1.dev6133
++inc/python:pip_install:194                result=0
+...
+...
 Using python 3.8 to install /opt/stack/devstack/tools/dbcounter
 +inc/python:pip_install:188                sudo -H LC_ALL=en_US.UTF-8 SETUPTOOLS_USE_DISTUTILS=stdlib http_proxy= https_proxy= no_proxy= PIP_FIND_LINKS= python3.8 -m pip install -c /opt/stack/requirements/upper-constraints.txt /opt/stack/devstack/tools/dbcounter
 Processing ./tools/dbcounter
