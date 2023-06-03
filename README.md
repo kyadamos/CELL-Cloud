@@ -73,4 +73,13 @@ Windows 11
 VirtualBox 7.0
 
 ### vm information
-[vm summary](/images/iter1/create_vm/vbox-vm1-details.png)
+OS Ubuntu 20.04 LTS (Focal Fossa)
+![vm summary](/images/iter1/create_vm/vbox-vm1-details.png)
+![network_manager](/images/iter1/network_manager/VirtualBox-network_manager-network_adapters.png)
+![network_adapters](/images/iter1/network_manager/VirtualBox-FirstVm-network_adapters.png)
+![ifconfig](/images/iter1/ubuntu/network/vm1-ifconfig.png)
+![iptables](/images/iter1/ubuntu/network/vm1-iptables.png)
+
+### openstack information
+![network](images/iter1/ubuntu/ubuntu_setup/vbox-vm1-openstack_network.png)
+![services](images/iter1/ubuntu/ubuntu_setup/vbox-vm1-openstack_services.png)
