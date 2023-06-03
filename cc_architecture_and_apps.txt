@@ -1,0 +1,221 @@
+CELL - Cloud Computing: Cloud Computing Architecture & Applications
+
+Goals:
+	- Distinguish between cloud offerings
+	- Describe components of a cloud & how they interact
+	- Explain value of each component in the cloud infrastructure
+	- Determine impact of loss for a given cloud component or service
+	- Describe importance of well-planned cloud operation & management
+
+I. Infrastructure & Components
+	- Any cloud is made up of one or more high-performance data centers
+		- High performance Data Centers: Common Cloud Elements, Virtual Service, Push-Button Deployments, Surplus Resources, Customized Services
+	- Ex (cloud service types & their features):
+		webfarm
+			Preconfigured webservers
+			Big internet pipes
+		high speed computation
+			lots of CPU
+			lots of memory
+		data storage
+			lots of disk space
+			fast disk interconnects
+		secure data storage
+			data encryption
+			hardware security modules
+		high availability
+			fault-tolerant hardware
+			redundant components for entire service delivery path
+	
+	A. Front End Servers:
+		- Exposes API (allows cloud code to interact with cloud itself)
+		- Expose SaaS Maturity levels 2-4
+			- Custom code point of access, custom servers & parsing, SOAP receiver and intermediary
+		- Web interface for browser-based SaaS services
+		- path for billing & load balancing
+	
+	B. Load Balancer:
+		- Responsible for taking incoming work from front-end & distributing to resources that can do the work
+		- Continuous monitoring & management, identifies resource constraints before realized
+		- Notify cloud components for scale activities: add/remove resources
+	
+	C. Server Farm:
+		- Backbone/core resources of any cloud
+		- Represents physical & virtual resources:
+			Physical:
+				- servers, storage, etc.
+			Virtual:
+				- hypervisor, vm management, vm's
+		- hypervisor:
+			- layer between hardware & software, runs on raw server (aka "bare metal")
+			- between "guest OS" (OS running on top of hypervisor, running virtual applications) and host OS
+				- makes it so that virtual applications don't care which OS the host is running off of
+		- VM management
+			- simplifies & automates virtual machine management tasks
+		
+	D. Deployment Server:
+		- Instantiate resources needed for users as determined by load-balancer
+		Staged Servers Ready for Deployment
+			- Almost ready-to-go:
+				- Core OS
+				- has required services per role
+				- simply configured/generic enough to perform whatever task required of it
+				- developed enough to perform
+		- Deployment Tools for Virtual Resources: VMWare vSphere, Microsoft System Center VM Manager
+	
+	E. Surplus Resources:
+		- Rule of Thumb = most companies should have > ~10% surplus resources
+		- High Availability lets companies be more tolerant to downtime/fault (e.g. catastrophes)
+		- Usually stored as bare metal due to lower costs (i.e. many server racks)
+		- Ready to be deployed
+			- Powered by management systems
+			- Deployed by Deployment Server
+
+	F. Accounting & billing
+		- Tracks usage across all cloud resources
+			- ex: API usage, Front end access, Server statistics, Storage statistics, Network statistics
+		- Rich reporting:
+			- Utility-billing model support
+		- Allows cloud consumers to place limits on utilization (e.g. trigger emails, cut off consumption, etc.)
+		- Integrates with infrastructure control components:
+			- Load balancer, server resource manager, front end
+
+	Quiz:
+		1. In general, a cloud is composed primarily of one ore more: data centers
+		2. Common elements in most clouds include: Virtual Servers, Push-Button Deployment Servers, Surplus resources available for near-instant scale
+		3. A cloud service designed for high-speed computation, such as ATT's Synaptic Compute as a Service, would have the following services/features: Lots of CPU, Lots of memory
+		4. Cloud component that serves as the interface to the cloud from the client applications: Front End Server
+		5. The Application Programming Interface within a cloud can be constructed as a: Custom API, Web-based Interface
+		6. The cloud component that allows the cloud to be scaled efficiently and effectively is the: Load Balancer
+		7. The core resource, both physical and virtual, of a cloud solution is the: Server Farms
+		8. Virtual resources within the Server Farms include: Hypervisor, Virtual Machines, Virtual Machine Management
+		9. Primary companies that provide the Hypervisor and Virtual Machine Management Software are: Microsoft, VMWare
+		10. Component in the cloud responsible for setting up and tearing down resources as required: Deployment server
+		11. Staged servers for web applications normally contain: Configuration Files, Core OS, Required Services for the roles, WAR files
+		12. Component within the cloud that enables scalability: Surplus Farms
+		13. Component within cloud that enables rich repoprting of usage to both cloud solution provider & consumer of cloud services: Accounting & Billing
+	
+II. How Cloud Cloud Computing Code Works
+	
+	A. Cloud Computing Code Maturity
+		- SaaS Maturity Levels describe degree* of cloud integration:
+			*no real standard as of 2023, just roughly mapped generic software maturity levels to loosely describe behaviors
+			1. Level 1
+				- Typical application rehosted in cloud on top of hypervisor or guest OS (instead of on bare metal or local machine)
+				- Each client using the application runs their own version
+					- i.e. 10 users connecting to run Word = 10 instances of Word running
+				- Each custom config. requires separate installation
+			2. Level 2
+				- Application configurable for multiple clients within same code
+				- Still running instanced code, but app is customizable without recreating or recompiling for each user
+			3. Level 3
+				- Supports multi-tenancy
+				- Effective resource utilization
+			4. Level 4
+				- Scalabilty through deep cloud integration; can run anywhere
+				- Awareness & support for distributed code execution
+				- Supports load balancing
+				- Supports dynamic resource allocation & deallocation
+	
+	B. Cloud Computing Integration Code
+		- APIs exposed & managed by front-end server
+			- Messaging typically in form of Simple Object Access Protocol (SOAP) XML wrapper and others (e.g. COBRA)
+			- SOAP support in Java, Perl, Python, C++, etc.
+		- Prebuild commodity applications use same APIs
+			- Choice of environments fosters development & adoption
+			- Simple function import & code extension
+				- ex: "from google.appengine.api import users; from google.appengine.ext import db"...
+		- Cloud programming tools widely available
+		- Example Cloud Code managing Amazon EC2 with SOAP: instantiate new instance
+			*Amazon Machine Image (AMI) name: ami-45e7002c
+			*Region to launch: US East
+			*Bounds: 1-4 instances, as many as possible
+			*Public key for authentication specified in keyName
+			
+			<RunInstances xmlns="https://ec2.amazonaws.com/doc/2009-11-30">
+				<imageID>ami-48e8002c</imageId>
+				<minCount>1</minCount>
+				<maxCount>4</maxCount>
+				<keyName>example-key-name</keyName>
+					<placement>
+						<availabilityZone>us-east-1a</availabilityZone>
+					</placement>
+			</RunInstances>
+			
+			- AMI ami-45e7002c contains an entire server
+			- Fedora Core 8 with Java JDK, Tomcat, Apache, MySQL; all configured to work together
+			*For Java code, just upload WAR and run -> result code is web farm deployment
+			*Same instance execution as a shell command
+			
+			PROMPT> ect2-run-instances ami-45e7002c -n 1-4 --availability-zone us-east-1a -k example-key-name
+		
+		- Example Cloud Code with AT&T CaaS: execute new instance via POST
+			*Host: att.cloud.com
+			*Authentication: BASIC {64-byte authN-token}
+			*Accept: application/vnd.com.sun.cloud.common.Messages+json
+			*Content-Type: application/vnd.com.sun.cloud.Vm+json
+			*X-Cloud_Specification-Version: 0.1
+			*Content-Length: 100
+			*Message body:
+			{	"name": "firewall-01"4 (50),
+				"description": "Something about this VM"4 (250)
+				"vmtemplate_uri: "/vmtemplates/111"7 (25)
+				"vnets"["/accounts/123/clouds/456/sdcs/789/clusters/001/vnets/445"7 (100)]
+			}
+		
+		- Example of Extending Cloud App: G-Mail (gmail.google.com)
+			- Commodity web app (really a cloud-based service that can be accessed through a web-based application)
+			- 3rd-party applications extend value & features
+				- MS Outlook (C++)
+				- G-Mail Drive (Python)
+				- G-Notify (.NET Framework)
+				- Mozilla Thunderbird (C & C++)
+		
+		Quiz:
+			1. Cloud Computing Maturity Levels: describe the degree of cloud integration
+			2. Cloud Computing Maturity Level 1: each user has their own version of the application, each custom configuration requires a separate installation
+			3. Cloud Computing Maturity Level 2: applications configurable for multiple users
+			4. Cloud Computing Maturity Level 3: supports multi-tenancy, is a more efficient use of resources
+			5. Cloud Computing Maturity Level 4: allows scalability through deep cloud integration, supports load balancing
+			6. Cloud integration: Messaging typically in form of SOAP XML wrapper & others, cloud programming tools are widely available, choice of environments fosters development & adoption
+
+III. When Clouds Fail
+	- Clouds generally considered reliable, correctly so
+	- Component failure
+	- Cloud failure
+	
+	A. Cloud Component Failure
+		- Client, Application, Platform (OS, Hypervisor), Infrastructure, Deployment server (Load balancer, accounting & billing system, network, internet), Server (data center, physical server, storage)
+	
+	B. Cloud Failure Symptoms
+		- Things (e.g. services) don't work
+			- Ex: timeouts, refreshing doesn't work, unpredictable
+		- Core service failure = whole cloud fails
+			
+	C. Cloud Failure Causes
+		- Any components failing, power failure (e.g. due to weather/catastrophes)
+		
+	D. Cloud Failure Reactions
+		- Decrease user trust
+		- Enterprises may decide to discontinue business entirely
+		- Service providers, press, shareholders
+		
+		Example: Aug 6 2009, unknown attacker DDoSed Cyxymu for political reasons, impacting providers (Twitter, Facebook, Google, Livejournal) => services partially/completely disabled for hundred of millions of users
+	
+	Quiz:
+		1. If individual component within cloud fails: applications that are currently running may continue to run, new instances may not run or may experience excessive lag in running
+		2. Cloud failures can be caused by: natural disasters, man-induced disasters, power failures
+		3. Impact of cloud failures can be catastrophic based on perceptions of: users, enterprises, service providers, press, shareholders
+	
+Summary:
+	- Cloud computing = evolution of converging tech
+	- Lucrative benefits to most industries
+	- Infinite services possible
+	- Code flexibility appealing to devs
+	- Dark Cloud getting scarier
+	
+	
+	
+	
+	
+	
