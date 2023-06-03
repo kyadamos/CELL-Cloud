@@ -32,13 +32,37 @@ Clouds are essentially composed of high-performance data centers
 
 ```mermaid
 flowchart TD
-    A[Front-End Servers] --- B[Load Balancer]
-    B[Load Balancer] --- C[High-Speed Network Backbone]
-    D[Accounting and Biling] --- C[High-Speed Network Backbone]
-    C[High-Speed Network Backbone] --- E[Surplus Storage]
-    C[High-Speed Network Backbone] --- F[Surplus Farms]
-    C[High-Speed Network Backbone] --- G[Deployment Server]
-    C[High-Speed Network Backbone] --- H[Server Farm (physical + virtual)]
-    C[High-Speed Network Backbone] --- I[Storage]
+    subgraph frontend[front-end servers]
+        cloudFrontEnd1
+        cloudFrontEnd2
+    end
+
+    subgraph backbone[backbone]
+        highSpeedNetwork
+    end    
+
+    subgraph surplus[surplusResources]
+        surplusStorage
+        surplusFarm
+    end
+
+    subgraph storage[storage]
+        storage1
+        storage2
+    end
+    
+    subgraph server_farm[server_farm_layer]
+        physical
+        virtual
+    end
+
+    backbone --- server_farm
+    backbone --- deploymentServer
+    backbone --- storage
+
+    frontend --- loadBalancer
+    loadBalancer --- backbone
+    accountingAndBilling --- backbone
+    backbone --- surplus
 ```
     
