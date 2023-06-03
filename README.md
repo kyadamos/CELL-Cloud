@@ -9,10 +9,10 @@ This course is split up into 4 iterations:
 
 | Iteration |  Title   |
 | --------- | -------- |
-|     0     | setup    |
-|     1     | building on basics   |
-|     2     | getting started |
-|     3     | going further  |
+|     0     | [setting up](https://github.com/kyadamos/CELL-Cloud/blob/main/README.md#iteration-0-setting-up)    |
+|     1     | [building on basics](https://github.com/kyadamos/CELL-Cloud/blob/main/README.md#iteration-1-building-on-basics)   |
+|     2     | [getting started](https://github.com/kyadamos/CELL-Cloud/blob/main/README.md#iteration-2-getting-started) |
+|     3     | [going further](https://github.com/kyadamos/CELL-Cloud/blob/main/README.md#iteration-3-going-further)  |
 
 ## iteration 0: setting up
 
@@ -66,6 +66,8 @@ flowchart TD
     backbone --- surplus
 ```
 
+
+
 ## iteration 1: building on basics
 
 ### system information
@@ -73,6 +75,7 @@ Windows 11
 VirtualBox 7.0
 VirtualBox network manager configuration:
 ![network_manager](/images/iter1/network_manager/VirtualBox-network_manager-network_adapters.png)
+
 
 ### vm information
 OS Ubuntu 20.04 LTS (Focal Fossa)
@@ -87,6 +90,7 @@ OS Ubuntu 20.04 LTS (Focal Fossa)
 ![ifconfig](/images/iter1/ubuntu/network/vm1-ifconfig.png)
 ![iptables](/images/iter1/ubuntu/network/vm1-iptables.png)
 
+
 ### openstack information
 
 #### /dashboard/admin/info
@@ -94,4 +98,13 @@ OS Ubuntu 20.04 LTS (Focal Fossa)
 
 #### /dashboard/admin/networks
 ![network](images/iter1/ubuntu/ubuntu_setup/vbox-vm1-openstack_network.png)
+
+
+
+## iteration 2: getting started
+
+
+
+## iteration 3: going further
+
 
