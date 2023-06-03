@@ -31,11 +31,14 @@ Many cloud providers follow a _utility-based computing model_, i.e. customers on
 Clouds are essentially composed of high-performance data centers
 
 ```mermaid
-graph TD;
-    Front-End Servers-->Load Balancer;
-    Load Balancer-->Deployment Server;
-    Deployment Server-->Server Farms;
-    Deployment Server-->Surplus Resources;
-    Deployment Server-->Accounting & Billing;
+flowchart TD;
+    A[Front-End Servers] --- B[Load Balancer];
+    B[Load Balancer] --- C[High-Speed Network Backbone];
+    D[Accounting and Biling] --- C[High-Speed Network Backbone];
+    C[High-Speed Network Backbone] --- E[Surplus Storage];
+    C[High-Speed Network Backbone] --- F[Surplus Farms];
+    C[High-Speed Network Backbone] --- G[Deployment Server];
+    C[High-Speed Network Backbone] --- H[Server Farm (physical + virtual)];
+    C[High-Speed Network Backbone] --- I[Storage];
 ```
     
