@@ -30,7 +30,7 @@ Many cloud providers follow a _utility-based computing model_, i.e. customers on
 
 Clouds are essentially composed of high-performance data centers
 
-```Cloud
+```mermaid
 graph TD;
     Front-End Servers-->Load Balancer;
     Load Balancer-->Deployment Server;
