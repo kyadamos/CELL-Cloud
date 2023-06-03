@@ -65,4 +65,12 @@ flowchart TD
     accountingAndBilling --- backbone
     backbone --- surplus
 ```
-    
+
+## iteration 1: building on basics
+
+### system information
+Windows 11
+VirtualBox 7.0
+
+### vm information
+[vm summary](/images/iter1/create_vm/vbox-vm1-details.png)
