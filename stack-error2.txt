@@ -1,0 +1,34 @@
+Building wheels for collected packages: fixtures, pyperclip, openstack-requirements
+  Building wheel for fixtures (PEP 517) ... done
+  Created wheel for fixtures: filename=fixtures-4.0.1-py3-none-any.whl size=63052 sha256=816593a8f8281c592faab6c896cc16ceaaf4c9c58533eef929b98d29ffea0d60
+  Stored in directory: /opt/stack/.cache/pip/wheels/b3/96/0f/d23693b58954b52d74e73fa40c2c6fce6da2580502697fbf37
+  Building wheel for pyperclip (setup.py) ... error
+  ERROR: Command errored out with exit status 1:
+   command: /opt/stack/requirements/.venv/bin/python3 -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-comsjt5b/pyperclip/setup.py'"'"'; __file__='"'"'/tmp/pip-install-comsjt5b/pyperclip/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' bdist_wheel -d /tmp/pip-wheel-emgms183
+       cwd: /tmp/pip-install-comsjt5b/pyperclip/
+  Complete output (6 lines):
+  usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: setup.py --help [cmd1 cmd2 ...]
+     or: setup.py --help-commands
+     or: setup.py cmd --help
+  
+  error: invalid command 'bdist_wheel'
+  ----------------------------------------
+  ERROR: Failed building wheel for pyperclip
+  Running setup.py clean for pyperclip
+  Building wheel for openstack-requirements (setup.py) ... error
+  ERROR: Command errored out with exit status 1:
+   command: /opt/stack/requirements/.venv/bin/python3 -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-req-build-twnftv8m/setup.py'"'"'; __file__='"'"'/tmp/pip-req-build-twnftv8m/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' bdist_wheel -d /tmp/pip-wheel-44yi8_mg
+       cwd: /tmp/pip-req-build-twnftv8m/
+  Complete output (6 lines):
+  usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: setup.py --help [cmd1 cmd2 ...]
+     or: setup.py --help-commands
+     or: setup.py cmd --help
+  
+  error: invalid command 'bdist_wheel'
+  ----------------------------------------
+  ERROR: Failed building wheel for openstack-requirements
+  Running setup.py clean for openstack-requirements
+Successfully built fixtures
+Failed to build pyperclip openstack-requirements
