@@ -1,0 +1,157 @@
+CELL - Cloud:
+
+OpenStack Cloud Tutorial: https://www.youtube.com/watch?v=U5ZlWmhcFk8
+OpenStack Docs: https://docs.openstack.org/2023.1/admin/
+
+I. Cloud Computing Virtualization
+	Consumer -(request)-> IT Dept
+		-> Instances
+			-> Hypervisors
+				-> Basic hardware (e.g. bare metal servers)
+	
+	User makes request
+		-> Cloud
+			-> Southbound APIs (IT Dept somewhere in here & Cloud)
+				-> Compute resources
+					-> Abstracted pool of storage resources
+					
+II. Cloud Service Stack
+	- Basic Cloud Service Stack:
+		Data
+			Application
+				Runtime
+					Middleware
+						OS
+							Virtualization
+								Servers*
+									Storage*
+										Networking*
+	*Hardware
+	
+	- Infrastructure as a Service:
+		User manages: Data - OS
+		Vendor manages: Virtualization (hardware & hypervisors) - Networking
+	- Platform as a Service: (AWS)
+		- User manages: Data & Applications
+		- Vendor manages: Runtime - Networking
+	- Software as a Service:
+		- User manages: Data
+		- Vendor manages: Applications - Networking
+		
+III. Cloud Types
+	A. Public
+		- User -> Firewall -> Service Provider Cloud (from vendor) -> Instances
+		- Ex: MS Azure, AWS
+		
+	B. Private
+		- "On-Premises" Cloud
+		- User -> On-Premises Cloud -> Instances -> Firewall -> Public Network
+		
+	C. Hybrid
+
+		
+IV. Hybrid Cloud
+	Secure Hybrid Cloud
+	
+		Service Provider Cloud (Public)*
+			Instances**
+			
+		On-Premises Cloud (Private)*
+			Instances**
+		
+		*Connected by Secure VPN Tunnel
+		**Can be moved from one cloud to another
+
+V. What is OpenStack?
+	- Collection of open source technologies delivering a massively scalable cloud operating system
+	- Allows user to set up their own cloud infrastructure; provides Infrustructure as a Service
+	
+	Keystone: Authentication/Authorization service
+	Glance: Store images (different OS files)
+	Nova: Computing service (launch & work with instances)
+	Neutron: Networking service connecting services to each other
+	Swift: Object storage
+	Cinder: Block storage
+	Horizon: Dashboard,
+		- helps provision application developers with different instances
+		- manage infrastructure as a whole
+	Ceilometer: Accounting & Billing; keeps track of uptime
+	Heat: Orchestration purposes
+
+VI. OpenStack Cloud Architecture
+	*image
+
+VII. OpenStack Community
+	- Open source, many people contributing
+	
+	A. By the Numbers
+
+VIII. OpenStack Cloud Deployment Models
+
+	A. On-Premises Distribution
+		- customer downloads & installs OpenStack distribution within internal network
+		
+	B. OpenStack-based Public Cloud
+		- cloud provider provides public cloud based on OpenStack and sells services
+		
+	C. Hosted OpenStack Private Cloud
+		- cloud provider hosts an OpenStack-based private cloud (including underlying hardware & OpenStack software) for a user
+		
+	D. OpenStack as a Service
+		- cloud provider hosts OpenStack management software as a service (basically sets up everything) & customers use software service
+		
+	E. Applicance-based OpenStack
+		- Applicances run directly on servers and do not require an OS
+		- 
+		
+IX. OpenStack Cloud Design Guide
+	A. General Purpose
+		- Ex: Small application & want to run dev test/prod on cloud infrastructure
+			- VM Disk Image Library (Glance): file format that describes containers for virtual HDDs for use in VMs (e.g. VM Workstation or VirtualBox)
+			- Raw Block Storage (Cinder): storage areas of different blocks, each can be controlled as an individual hard drive
+			- File/Object Storage (Swift): 
+			- Firewall: 
+			- Load Balancers (L Bass): 
+			- Software Bundles: 
+	
+	B. Compute Focused
+		- Ex: 
+			- High Performance Computing
+			- Big Data Analytics using Hadoop
+			- Continuous Integration/Continuous Deployment
+			- Platform as a Service (instead of Infrastructure as a Service)
+			- Signal Processing for NFV
+	
+	C. Storage Focused
+		- Ex:
+			- Archive & hierarchical storage management
+			- Content storage & synchronization
+			- Data analytics with parallel file systems
+			- Unstructured data store for services
+			- Persistent block storage
+			- Operating system & image storage
+			- Media streaming
+			- Databases
+	
+	D. Network Focused
+		- Ex:
+			- Bursting: Private to public
+			- Disaster recovery
+			- Development & Testing
+			- Federated cloud
+			- Support legacy systems
+	
+	E. Multi-site
+		- Ex:
+			- Organization with diverse geographic footprint
+			- Geo-location sensitive data
+			- Data locality
+	
+	F. Security & Legal Requirements
+		- Ex:
+			- Contractual Issues
+			- Third Party Involvement
+			- Data location
+	
+	
+Summary:

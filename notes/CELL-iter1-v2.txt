@@ -1,0 +1,362 @@
+Create 3 adapates add IP 
+
+Graphical user interface, application
+
+Description automatically generated 
+
+ 
+
+ 
+
+Create a new vm  
+
+Graphical user interface, text, application, email
+
+Description automatically generated 
+
+ 
+
+Add 8 memory very important due to virtualization on vbox 7 and 2CPUS  
+
+ 
+
+Timeline
+
+Description automatically generated with medium confidence 
+
+Go to system. Acceleration change from default to kvm 
+
+ 
+
+ 
+
+Should look like below. 
+
+Graphical user interface, text, application, email
+
+Description automatically generated 
+
+Close and start ubuntu 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Graphical user interface, application
+
+Description automatically generated 
+
+ 
+
+Change power setting vm don’t go on sleep 
+
+ 
+
+ 
+
+Enable ssh 
+
+Text
+
+Description automatically generated 
+
+Add the ip address 
+
+Text
+
+Description automatically generated 
+
+ 
+
+Resolve the "Temporary failure in name resolution" Error 
+
+I will use nano you can use vi or any othere editor you feel comfortable using. 
+
+Fix permissions  
+
+ 
+
+Text
+
+Description automatically generated 
+
+ 
+
+Add ip table 
+
+sudo iptables -I FORWARD 1 --dst 172.16.0.0/24 -j ACCEPT 
+
+sudo iptables -I FORWARD 1 --dst 172.23.1.0/24 -j ACCEPT 
+
+sudo iptables -I FORWARD 1 --src 172.16.0.0/24 -j ACCEPT 
+
+sudo iptables -I FORWARD 1 --src 172.23.1.0/24 -j ACCEPT 
+
+sudo iptables -t nat -A POSTROUTING -s 172.16.0.0/24 \! -d 172.16.0.0/24 \ 
+
+-j MASQUERADE 
+
+sudo iptables -t nat -A POSTROUTING -s 172.23.1.0/24 \! -d 172.23.1.0/24 \ 
+
+-j MASQUERADE 
+
+sudo iptables-save 
+
+ 
+
+Text
+
+Description automatically generated 
+
+Now update  
+
+sudo apt update 
+
+ 
+
+ 
+
+sudo apt -y upgrade 
+
+ 
+
+sudo apt -y dist-upgrade 
+
+Text
+
+Description automatically generated with low confidence 
+
+ 
+
+Enable Universe, Multiverse and Restricted repository on Ubuntu 20.04 step by step instructions 
+
+Enable repositories from command line 
+
+sudo add-apt-repository universe 
+
+sudo add-apt-repository multiverse 
+
+sudo add-apt-repository restricted 
+
+ 
+
+Graphical user interface, text, application, chat or text message
+
+Description automatically generated 
+
+Install net tools 
+
+Text
+
+Description automatically generated  
+
+Add repo cloud Victoria  
+
+sudo add-apt-repository cloud-archive:Victoria 
+
+Text
+
+Description automatically generated 
+
+Do sudo update 
+
+ 
+
+ 
+
+ 
+
+Graphical user interface, text, application, chat or text message
+
+Description automatically generated 
+
+Do sudo reboot 
+
+ 
+
+Add the devstack to sudo 
+
+Text
+
+Description automatically generated 
+
+Move to stack dir 
+
+Graphical user interface
+
+Description automatically generated 
+
+Install Git with command sudo apt install git 
+
+Text
+
+Description automatically generated 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Download Devstack tru git 
+
+ 
+
+git clone https://opendev.org/openstack-dev/devstack 
+
+ 
+
+Text
+
+Description automatically generated 
+
+Add i386 architecture.  
+
+Text
+
+Description automatically generated 
+
+ 
+
+Verify if i386 installed  you need to see both architectures are present  
+
+ 
+
+ 
+
+Now reinstall python and upgrade pip 
+
+ 
+
+ sudo apt install --reinstall python3-pip 
+
+Text
+
+Description automatically generated 
+ sudo pip install -U pip 
+
+Text
+
+Description automatically generated 
+
+Move to devstack 
+
+Text
+
+Description automatically generated 
+
+And add to local.conf 
+
+ 
+
+cat >  local.conf <<EOF 
+
+[[local|localrc]] 
+
+ 
+
+HOST_IP=10.20.0.10 
+
+ADMIN_PASSWORD=letmein 
+
+MYSQL_PASSWORD=letmein 
+
+RABBIT_PASSWORD=letmein 
+
+SERVICE_PASSWORD=letmein 
+
+SERVICE_TOKEN=letmein 
+
+disable_service etcd3 
+
+RECLONE=yes 
+
+EOF 
+
+ 
+
+ 
+
+Text
+
+Description automatically generated 
+
+Fix permissions 
+
+sudo chown -R stack /opt/stack/ 
+
+sudo chown -R $USER:$USER /opt/stack/devstack 
+
+ 
+
+Now run the force install cmd 
+
+ 
+
+If encounter error run the other chow command. sudo chown -R stack /opt/stack/.cache 
+
+ 
+
+ 
+
+ 
+
+And you should have a successful installation. 
+
+ 
+
+Text
+
+Description automatically generated 
+
+ 
+
+http://10.20.0.10/dashboard/auth/login/?next=/dashboard/ 
+
+ 
+
+Graphical user interface, application
+
+Description automatically generated 
+
+ 
+
+ 
+
+Bubble chart
+
+Description automatically generated 
+
+ 
+
+ 
+
+ 
+
+ 

@@ -1,0 +1,117 @@
+CELL - Cloud Computing: Cloud Computing Fundamentals (PLE)
+
+Goals:
+	- Explain concept of cloud computing
+	- Distinguish between different cloud offerings
+	- Definte key tech advancements that enable modern cloud solutions
+	- List 3 common cloud computing architectural models
+
+I. Definition of Cloud Computing
+	- "An approach to providing a convergence of computing services over the network"
+	- Branding & marketing of existing tech has evolved & improved
+	- Examples of Cloud Computing characteristics:
+		- Virtualization Technologies
+		- Grid Computing
+		- Distributed Design,
+		- Federated Enterprise IT Management
+
+	Quiz:
+		1. Cloud Computing's appeal towards smaller enterprises = low cost of entry to cloud solutions through minimized capital spending
+		2. Client application interface importance < functionality importance because:
+			- Multiple interfaces can sit above functionality, leading to flexible interfaces
+			- User interface/experience easier to learn/use because application look & feel is becoming more similar
+			- Value proposition to more educated tech users shifted over time
+		3. Typical Cloud Computing Characteristics:
+			- Server-centric processing & storage
+			- Minimized startup investment
+			- Simple, rapid deployment & operations
+			- High availability
+			- Client interface not as important as functionality
+
+
+II. Underlying Trends of Powering Clouds
+	A. Software as a Service (SaaS)
+		- Software that provides services for users: "Interface is the value, not how/where it runs"
+			- Replaces raditional applications installed on each machine
+		- Advancements:
+			- Flexible software models => more customizability
+				- ex: allow software to distribute the load of running between client & server
+			- Self-contained (2) multi-tenant (1) code
+				(1) Code can run one time and service multiple users (as opposed to traditional applications servicing one user per instance, e.g. MS Word)
+				(2) Very few, if any, dependencies (e.g. framework not needed to be installed to run software; SaaS comes ready to run as is)
+			- Processing can be redirected
+				- SaaS applications can dynamically optimize running their code
+					- e.g. Can pull more server resources if heavy processing underway; can reallocate parts of code to run at different locations (like unused resources) to redistribute the load of the processes
+			- Form follows function
+				- Consumers prioritizing robust & efficient application solutions over usable interface
+		- Examples of Cloud Computing Offerings:
+			Applications: Salesforce, AT&T Mobile Enterprise Application Platform, Google applications (gmail, google cloud console, etc.)
+			Storage: Cloudfiles, Box, ATT Synaptic Storage as a Service
+			Platform as a Service (PaaS) - Development Env or OS as a service: Cloudo, iCUBE, eyeOS
+			App Platforms: Exchange, Office, Sharepoint, Oracle, Apache
+			
+	B. Virtualization
+		- Decouples computing elements from each other (e.g. Hardware, OS, Services, Core applications)
+			- Allows software to manage different components of a system individually, which lets users scale up or down as needed
+		- Advancements:
+			- Increasing stability, scalable performance (e.g. User's processes are requiring more resources -> provider can easily offer up unused components for a cost)
+		- Examples:
+			- Hardware:
+				- AMD-V, Intel VT-x (CPUs) offer virtualization capabilities to consumers
+			-Software:
+				- Hyper-V, VMWare, Windows Server, OVM
+				
+	C. Utility-Based Computing Model
+		- Pay for what you use
+			- Allows small- & medium-sized companies to scale much easier (don't need to invest a lot of capital on developing & hiring a team to manage storage/processing anymore; can purchase resources as needed via utility-based computing model companies)
+		- Examples:
+			- ATT Synaptic Compute as a Service, Amazon WebServices, Google App Engine, VMForce
+			
+	Quiz:
+		1. Multi-Tenant Code = "Scalable and efficient development approach to writing software for cloud services"
+		2. The advancement of what three computing trends make cloud computing prevalent today:
+			- SaaS
+			- Virtualization
+			- Utility-Based Computing Model
+		3. What virtualization advancements have enabled modern cloud computing solutions?
+			- Minimal resource consumption of hypervisor & host operating environment
+			- Rich virtualization support across software & hardware platforms
+			- Implementation of virtualization support within Intel & AMD CPUs
+		4. Marketing trends that fueled advancement of the Utility-Based Computing Model
+			- Flexible pricing models
+			- Fixed-cost options for service consumers
+			- Opportunity for zero-priced entry
+			- Customers willing to pay price point necessary to drive supply channels
+
+III. Cloud Computing Models
+	- Models: describe where cloud resources exist & how resources interact
+	A. Public Cloud
+		- Internet-accessible resources billed by usage
+		- Clients interacting directly with cloud computing service provider
+		- Single point-of-interface for clients
+	
+	B. Private Cloud (Traditional model)
+		- Data center providing cloud-like services
+	
+	C. Hybrid Cloud
+		- Combination of private & public cloud computing (internal & external components form a solution)
+			- Ex: ATT provides 80% of resources for enterprise needs (network connectivity, storage), another provider provides the rest of the 20% (data-processing)
+			- Ex: Client computers on a corporate network connected to corporate data center (private) & other cloud computing services providers (public)
+		Federated Hybrid Cloud:
+			- For companies requiring industry/government security/privacy regulations
+			- Client computers federated through corporate data center (connect to corporate data center and then through internet to cloud computing service providers)
+			- Minimizes security exposure, centralizes IT
+	
+	Quiz:
+		1. A self-sufficient, enterprise-specific data center that provides cloud services is often classified as a: Private Cloud
+		2. Benefits to implementing a Hybrid Cloud solution:
+			- Increased functionality by leveraging strengths of multiple independent cloud services & applications
+			- Lowering cost through multiple vendor negotiations
+			- Selecting best-in-class service provider for each component
+			- Supplementing IT-owned resources with cloud resources to complete a solution
+		3. A client-centric cloud application that can use services from multiple clouds, both internal & external, to form a solution best describes a: Hybrid computing model
+		4. A server-centric cloud application that can use services from multiple clouds, both internal and external, to form a solution best describes a: Federated Hybrid model
+	
+	Summary:
+		Cloud computing is an advancing technology of multiple technologies providing solutions at lower cost of deployment & operations (utility-based computing), with flexible architectures for varying solutions, that are broadly available without requiring high capital -- allowing vendors/providers to convert their unused resources into profitable ones
+
