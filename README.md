@@ -71,15 +71,27 @@ flowchart TD
 ### system information
 Windows 11
 VirtualBox 7.0
+VirtualBox network manager configuration:
+![network_manager](/images/iter1/network_manager/VirtualBox-network_manager-network_adapters.png)
 
 ### vm information
 OS Ubuntu 20.04 LTS (Focal Fossa)
+
+#### details
 ![vm summary](/images/iter1/create_vm/vbox-vm1-details.png)
-![network_manager](/images/iter1/network_manager/VirtualBox-network_manager-network_adapters.png)
+
+#### network adapters
 ![network_adapters](/images/iter1/network_manager/VirtualBox-FirstVm-network_adapters.png)
+
+#### interface config & iptables
 ![ifconfig](/images/iter1/ubuntu/network/vm1-ifconfig.png)
 ![iptables](/images/iter1/ubuntu/network/vm1-iptables.png)
 
 ### openstack information
-![network](images/iter1/ubuntu/ubuntu_setup/vbox-vm1-openstack_network.png)
+
+#### /dashboard/admin/info
 ![services](images/iter1/ubuntu/ubuntu_setup/vbox-vm1-openstack_services.png)
+
+#### /dashboard/admin/networks
+![network](images/iter1/ubuntu/ubuntu_setup/vbox-vm1-openstack_network.png)
+
