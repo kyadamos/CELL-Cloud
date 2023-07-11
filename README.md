@@ -1,5 +1,6 @@
 # CELL : Cloud Computing
-ka7462
+
+uuid: ka7462
 
 ## Overview
 
@@ -17,8 +18,9 @@ This course is split up into 4 iterations:
 ## iteration 0: setting up
 
 This section defines cloud computing through:
- - its function
- - its technological composition
+
+- its function
+- its technological composition
 
 ### function
 
@@ -66,45 +68,51 @@ flowchart TD
     backbone --- surplus
 ```
 
-
-
 ## iteration 1: building on basics
 
 ### system information
+
 Windows 11
 VirtualBox 7.0
 VirtualBox network manager configuration:
 ![network_manager](/images/iter1/network_manager/VirtualBox-network_manager-network_adapters.png)
 
-
 ### vm information
+
 OS Ubuntu 20.04 LTS (Focal Fossa)
 
 #### details
+
 ![vm summary](/images/iter1/create_vm/vbox-vm1-details.png)
 
 #### network adapters
+
 ![network_adapters](/images/iter1/network_manager/VirtualBox-FirstVm-network_adapters.png)
 
 #### interface config & iptables
+
 ![ifconfig](/images/iter1/ubuntu/network/vm1-ifconfig.png)
 ![iptables](/images/iter1/ubuntu/network/vm1-iptables.png)
-
 
 ### openstack information
 
 #### /dashboard/admin/info
+
 ![services](images/iter1/ubuntu/ubuntu_setup/vbox-vm1-openstack_services.png)
 
 #### /dashboard/admin/networks
+
 ![network](images/iter1/ubuntu/ubuntu_setup/vbox-vm1-openstack_network.png)
 
-
-
 ## iteration 2: getting started
+Horizon (Dashboard): Web-based user interface for OpenStack Dashboard
 
+Nova (Compute): Project name for OpenStack Compute -- cloud computing fabric controller
+ 
+Swift (Object Store): Highly available, distributed, consistent object/blob storage for storing large amounts of data efficiently, safely, inexpensively
 
+Glance (Image Registry): Provides services for discovering, registering, retrieving virtual machine images. Has RESTful API to allow querying VM images & their metadata
+
+Neutron (Networking): OpenStack project to provide Network Connectivity as a Service b/w interface devices
 
 ## iteration 3: going further
-
-
