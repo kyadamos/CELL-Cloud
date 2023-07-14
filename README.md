@@ -116,3 +116,7 @@ Glance (Image Registry): Provides services for discovering, registering, retriev
 Neutron (Networking): OpenStack project to provide Network Connectivity as a Service b/w interface devices
 
 ## iteration 3: going further
+
+
+## references:
+- [OpenStack from Zero to Nova: An Activity-Driven Workshop](https://www.youtube.com/watch?v=a86pfDm1Dqk): Tutorial/walkthrough of performing administrative tasks in OpenStack
