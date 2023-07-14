@@ -35,28 +35,33 @@ Zero to Nova Video
 A screen shot of the dashboard is below. The tabs in the left sidebar will provide overall access to your cloud environment as administrator. In the home screen of the page is the Overview tab and will display the usage of your system. Please take some time and navigate the tabs on the left sidebar and screens to familiarize yourself with Horizon.
 (Image)
 Access the following tabs to complete these tasks:
-System Panel tab
- 
-Overview | View basic reports.
-Resource Usage | Use the following tabs to view the following usages: Daily Report View the daily report. Stats View the statistics of all resources.
-Hypervisors | View the hypervisor summary.
-Host Aggregates | View, create, and edit host aggregates. View the list of availability zones.
-Instances | View, pause, resume, suspend, migrate, soft or hard reboot, and delete running instances that belong to users of some, but not all, projects. Also, view the log for an instance or access an instance through VNC.
-Volumes | View, create, edit, and delete volumes and volume types.
-Flavors | View, create, edit, view extra specifications for, and delete flavors. A flavor is size of an instance.
-Images | View, create, edit properties for, and delete custom images.
-Networks | View, create, edit properties for, and delete networks.
-Routers | View, create, edit properties for, and delete routers.
-System Info | Use the following tabs to view the service information: Services View a list of the services. Compute Services View a list of all Compute services. Network Agents View the network agents. Default Quotas View default quota values. Quotas are hard-coded in OpenStack Compute and define the maximum allowable size and number of resources.
-Projects | View, create, assign users to, remove users from, and delete projects.
-Users | View, create, enable, disable, and delete users.
+
+| System Panel tab | Description |
+| ----- | ----- |
+| Overview | View basic reports. |
+| Resource Usage | Use the following tabs to view the following usages: Daily Report View the daily report. Stats View the statistics of all resources. |
+| Hypervisors | View the hypervisor summary. |
+| Host Aggregates | View, create, and edit host aggregates. View the list of availability zones. |
+| Instances | View, pause, resume, suspend, migrate, soft or hard reboot, and delete running instances that belong to users of some, but not all, projects. Also, view the log for an | instance | or access an instance through VNC. |
+| Volumes | View, create, edit, and delete volumes and volume types. |
+| Flavors | View, create, edit, view extra specifications for, and delete flavors. A flavor is size of an instance. |
+| Images | View, create, edit properties for, and delete custom images. |
+| Networks | View, create, edit properties for, and delete networks. |
+| Routers | View, create, edit properties for, and delete routers. |
+| System Info | Use the following tabs to view the service information: Services View a list of the services. Compute Services View a list of all Compute services. Network Agents View the | | network agents. Default Quotas View default quota values. Quotas are hard-coded in OpenStack Compute and define the maximum allowable size and number of resources. |
+| Projects | View, create, assign users to, remove users from, and delete projects. |
+| Users | View, create, enable, disable, and delete users. |
 A more detailed explanation of all tabs and displays and a guide can be found at {+}https://docs.openstack.org/install-guide/index.html
+
 
 ### Demo Prep
 
 Start creating a document (PowerPoint, Word, OneNote, etc.) for use during your demo.
+
 This will be used to help show the Topic Advisor how you progressed through the iteration.
+
 Think about adding screen shots with timestamps or plan on live demos to help supplement the document and demonstrate your learnings.
+
 Update the document as you move through the iteration.
 
 ## Task 3 - Working with Horizon Projects
@@ -66,19 +71,33 @@ Update the document as you move through the iteration.
 #### 3.1.1 Create New Project
 
 Navigate to Identity Panel > Projects via the tab options on the left.
+
 ![Image](https://wiki.web.att.com/download/attachments/1445603113/image2023-7-3_12-21-25.png?version=1&modificationDate=1688404886000&api=v2)
+
 Click the Create Project button in the upper right corner.
+
 (Image)
+
 Under the Project Info tab, add the project name. The description is optional.
+
 (Image) 
+
 In the Project Members tab, you can add any members to the project you want.
+
 Members don't have to be added now. You can always modify them via the edit projects option once the project has been created.
+
 (Image) 
+
 You do not need to change anything under the project group.
+
 (Image)
+
 Select create project
+
 (Image)
+
 Since they are closely related, next we will cover how to create a new user and add them to the new project.
+
 
 #### 3.1.2 Create a New User
 
