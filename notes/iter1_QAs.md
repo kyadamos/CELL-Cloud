@@ -6,9 +6,9 @@ For archive purposes, please complete the checklist for each participant and nam
 ## Iteration 1
 Task 1 & 2 (Optional)
 - What are some benefits of Cloud Computing that are driving us to embrace this solution?
- - Reduced expense
- - Scalability
- - Resource optimization
+  - Reduced expense
+  - Scalability
+  - Resource optimization
 - What are some Cloud Computing concepts that seem difficult to grasp?
 - What are some Cloud Apps you would be interested to work on?
 Task 3
