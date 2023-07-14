@@ -29,4 +29,4 @@ Task 5 SSH to the VM
 - What are roadblocks you ran into when trying to SSH to the VM
 Task 6 Openstack CLI (Optional)
 - What are some CLI commands you learnt and what do they do?
-Task 7 Multi-tenancy Concerns![image](https://github.com/kyadamos/CELL-Cloud/assets/62266076/20314434-0ff0-4cac-9bd2-e92f8ae9dadc)
+Task 7 Multi-tenancy Concerns
