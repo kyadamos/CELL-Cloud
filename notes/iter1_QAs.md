@@ -4,14 +4,14 @@ Please use this checklist to guide participants’ learning. Answering the quest
 Have participants save screenshots for each task to simplify the demo, keeping in mind others would like to understand what you have done. This will also be useful to SMEs when there are questions related to a task.
 For archive purposes, please complete the checklist for each participant and name the file [1stName] [LastName] SDN Checklist
 ## Iteration 1
-- Task 1 & 2 (Optional)
-What are some benefits of Cloud Computing that are driving us to embrace this solution?
-Reduced expense
-Scalability
-Resource optimization
-What are some Cloud Computing concepts that seem difficult to grasp?
-What are some Cloud Apps you would be interested to work on?
-- Task 3
+Task 1 & 2 (Optional)
+- What are some benefits of Cloud Computing that are driving us to embrace this solution?
+ - Reduced expense
+ - Scalability
+ - Resource optimization
+- What are some Cloud Computing concepts that seem difficult to grasp?
+- What are some Cloud Apps you would be interested to work on?
+Task 3
 What OpenStack services do you use to manage
 networking (Neutron)
 compute (Nova)
