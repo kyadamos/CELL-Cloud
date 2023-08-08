@@ -1,0 +1,17 @@
+Error:
+
+	Missing value auth-url required for auth plugin password
+
+Solution:
+
+	https://stackoverflow.com/questions/42844649/missing-value-auth-url-required-for-auth-plugin-password
+
+Error:
+
+	JSONDecodeError at /project/instances/
+	Expecting value: line 1 column 1 (char 0)
+
+Solution:
+
+	https://stackoverflow.com/questions/61029848/jsondecodeerror-in-openstack-ubuntu-18-4
+
