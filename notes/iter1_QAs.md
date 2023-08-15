@@ -1,10 +1,14 @@
-Cloud Iteration 1 Answer Key
+# Cloud Iteration 1 Answer Key
+
 Instructions
 Please use this checklist to guide participants’ learning. Answering the questions will demonstrate their understanding of each task.
 Have participants save screenshots for each task to simplify the demo, keeping in mind others would like to understand what you have done. This will also be useful to SMEs when there are questions related to a task.
 For archive purposes, please complete the checklist for each participant and name the file [1stName] [LastName] SDN Checklist
+
 ## Iteration 1
+
 Task 1 & 2 (Optional)
+
 - What are some benefits of Cloud Computing that are driving us to embrace this solution?
   - Reduced expense
   - Scalability
@@ -18,7 +22,7 @@ Task 3
   - storage (Cinder)
   - Security (Keystone)
   - Images (Glance)
-- What are some good resources you found on understanding OpenStack architecture? 
+- What are some good resources you found on understanding OpenStack architecture?
 Task 4
 - Do a walkthrough of your install and highlight the steps that were challenging for you.
 - Were the instructions satisfactory?

@@ -1,6 +1,9 @@
-Cloud Iteration 2 Answer Key
+# Cloud Iteration 2 Answer Key
+
 ## Iteration 2
+
 Task 1 & 2 Horizon Basics
+
 - What are some uses of the Horizon dashboard?
   - View basic resource usage reports by project (on the Overview tab)
   - View/ Manage VM Instances
